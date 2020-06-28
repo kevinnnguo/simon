@@ -61,7 +61,7 @@ $(".btn").click(function(e){
     playSound("wrong.mp3");
     setTimeout(function(){$("body").removeClass("game-over");}, 1000);
     $("h1").html("Game Over, Press Any Key to Restart");
-    startOver()；   
+    startOver();   
     return;
   }
 

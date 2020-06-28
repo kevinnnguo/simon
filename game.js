@@ -43,6 +43,13 @@ function animatePress(currentColour){
   }, 100);
 }
 
+function startOver(){
+  gamePattern = [];
+  gameStarted = false;
+  level = 0;
+}
+
+
 $(".btn").click(function(e){
   var userChosenColour = e.target.id;
   userClickedPattern.push(userChosenColour);
@@ -62,12 +69,6 @@ $(".btn").click(function(e){
       setTimeout(function(){nextSequence()}, 1000);
   }
 })
-
-function startOver(){
-  gamePattern = [];
-  gameStarted = false;
-  level = 0;
-}
 
 $(document).on("keypress",function(){
   if(!gameStarted){
